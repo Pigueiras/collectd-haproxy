@@ -299,7 +299,7 @@ def config(config_values):
         elif node.key == "EnhancedMetrics" and node.values[0]:
             enhanced_metrics = _str_to_bool(node.values[0])
         elif node.key == "ExcludeMetric" and node.values[0]:
-            excluded_metrics.add(node.values[0])
+            excluded_metrics.extend(node.values)
         elif node.key == "Testing" and node.values[0]:
             testing = _str_to_bool(node.values[0])
         elif node.key == 'Dimension':
